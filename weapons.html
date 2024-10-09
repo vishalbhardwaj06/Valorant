@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>VALORANT HOMEPAG</title>
+        <link rel="shortcut icon" href="images/favivon.png" type="image/x-icon">
+        <link rel="stylesheet" href="style.css">
+        <script src="script.js"></script>
+        <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    </head>
+<body>
+    <div class="main-menu flex">
+        <div class="menu">
+            <ul class="nav-items">
+                <li class="full-nav-item cursor-pointer "> <a href="/index.html"> Home </a></li>
+                <li class="full-nav-item cursor-pointer "> <a href="/agents.html"> Agents </a></li>
+                <li class="full-nav-item cursor-pointer"> <a href="/weapons.html"> Weapons </a></li>
+                <li class="full-nav-item cursor-pointer"> <a href="/about.html"> About</a></li>
+                <li class="full-nav-item cursor-pointer"> <a href="/conact.html">Contact</a></li>
+            </ul>
+    
+            <div class="cross">
+                <i class="fa-solid fa-xmark"></i>
+            </div>
+        </div>
+    
+    </div>
+    
+    
+    <div class="search-main">
+        <div class="searchbar">
+            <div class="search">
+                <div class="cross-01">
+                    <i class="fa-solid fa-xmark"></i>
+                </div>
+                <p class="search-heading">search Anything</p>
+                <div class="tx-input-group">
+                    <input type="search" name="" id="search-main" placeholder="Search here">
+                    <div onclick="SearchFilter()"><i class="fa-solid fa-magnifying-glass"></i></div>
+                </div>
+            </div>
+    
+            <div class="container" id="search-output">
+            </div>
+        </div>
+    </div>
+    
+    <div class="container-fluid header-logo">
+        <div class="container ">
+            <a href="/index.html"> <img class="main-logo" src="images/logo.png (1).webp" alt=""> </a>
+        </div>
+    </div>
+    
+    <div class="container-fluid nav-menu">
+        <div class="container ">
+            <div class="flex">
+                <div class="w-25">
+                    <div class="nav-icon">
+                        <span><i class="fa-solid fa-bars-staggered"></i></span>
+                    </div>
+                </div>
+                <div class="w-50">
+                    <ul class="nav-items">
+                        <li class="nav-item cursor-pointer active-nav"> <a href="/index.html"> Home </a></li>
+                        <li class="nav-item cursor-pointer"> <a href="/agents.html"> Agents </a></li>
+                        <li class="nav-item cursor-pointer"> <a href="/weapons.html"> Weapons </a></li>
+                        <li class="nav-item cursor-pointer"> <a href="/about.html"> About</a></li>
+                        <li class="nav-item cursor-pointer"> <a href="/conact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="w-25">
+                    <div class="nav-search">
+                        <span><i class="fa-solid fa-magnifying-glass"></i></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="search-main">
+        <div class="searchbar">
+            <div class="search">
+                <div class="cross-01">
+                    <i class="fa-solid fa-xmark"></i>
+                </div>
+                <p class="search-heading">search Anything</p>
+                <div class="tx-input-group">
+                    <input type="search" name="" id="search-main" placeholder="Search here">
+                    <div onclick="SearchFilter()"><i class="fa-solid fa-magnifying-glass"></i></div>
+                </div>
+            </div>
+
+            <div class="container" id="search-output">
+            </div>
+        </div>
+    </div>
+
+    <div class="container-fluid bgDiv_03">
+        <div class="container agent-page-cont">
+            <h1 class="section-heading cursor-pointer "> Select YOUR Weapon </h1>
+            <div class="flex" id="/weapons">
+                
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <div class="footer">
+        <div class="bottom-footer container">
+            <div class="tx-social-icons">
+                <span class="social-icon"><i class="fa-brands fa-instagram"></i></span>
+                <span class="social-icon"><i class="fa-brands fa-twitter"></i></span>
+                <span class="social-icon"><i class="fa-brands fa-youtube"></i></span>
+                <span class="social-icon"><i class="fa-brands fa-whatsapp"></i></span>
+                <span class="social-icon"><i class="fa-brands fa-facebook"></i></span>
+            </div>
+
+            <p class="text-center"> <span>© 2020-2024 Riot Games</span>, Inc. RIOT GAMES, VALORANT and any associated logos are
+                trademarks, service marks, and/or registered trademarks of Riot Games, Inc.</p>
+
+            <div class="_2Ojj9KgtyZTHH-I2MkvQqi riotbar-legal-links">
+                <ul>
+                    <li><a class="" href="https://www.riotgames.com/en/privacy-notice" target="_blank">Privacy
+                            Notice</a></li>
+                    <li><a class="" href="https://www.riotgames.com/en/terms-of-service" target="_blank"
+                            >Terms of Service</a></li>
+                    <li><a class="" href="#">Cookie Preferences</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+    <script>
+
+        $(document).ready(function(){
+            $(".nav-icon").click(function(){
+                $(".main-menu").addClass("active");
+            });
+
+            $(".cross").click(function(){
+                $(".main-menu").removeClass("active");
+            });
+
+            $(".nav-search").click(function(){
+                $(".search-main").addClass("active");
+            });
+
+            $(".cross-01").click(function(){
+                $(".search-main").removeClass("active");
+            });
+
+            $(window).scroll(function() {
+                if ($(document).scrollTop() > 50) {
+                $(".nav-menu").addClass("top-sticky");
+                } else {
+                $(".nav-menu").removeClass("top-sticky");
+                }
+            });
+        });
+
+    </script>
+
+    <script>
+        Weapons();
+    </script>
+
+
+
+</body>
+</html>
